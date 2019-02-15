@@ -6,3 +6,5 @@ Vue test demo
 [V-if & v-else & v-show demo](#)
 
 [v-for demo](#)
+
+[v-text demo](#)
