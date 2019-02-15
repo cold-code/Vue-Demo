@@ -1,0 +1,25 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "Vue Demo",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cold-code/Vue-Demo.git"
+  },
+  "keywords": [
+    "Suhan21421589"
+  ],
+  "author": "Cold-code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cold-code/Vue-Demo/issues"
+  },
+  "homepage": "https://github.com/cold-code/Vue-Demo#readme"
+}
