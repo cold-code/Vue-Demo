@@ -14,3 +14,5 @@ Vue test demo
 [v-model demo](#)
 
 [v-bind demo](#)
+
+[v-pre & v-cloak & v-once demo](#)
