@@ -10,3 +10,5 @@ Vue test demo
 [v-text demo](#)
 
 [v-on demo](#)
+
+[v-model demo](#)
