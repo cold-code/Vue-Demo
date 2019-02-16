@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model 数据源绑定 实例</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>v-model 数据源绑定 实例</h1>
+    <hr>
+    <div id="app" >
+        <p>原始数据：{{message}}，Cold-code</p>
+        <h4>文本框</h4>
+        <p>v-model:<input type="text" v-model="message"></p>
+        <p>v-model.lazy:<input type="text" v-model.lazy="message"></p>
+        <p>v-model.number:<input type="text" v-model.number="message"></p>
+        <p>v-model.trim:<input type="text" v-model.trim="message"></p>
+        <hr>
+        <h4>文本域</h4>
+        <textarea name="" id="" cols="30" rows="10" v-model="message"></textarea>
+        <hr>
+        <h4>复选框绑定一个值</h4>
+        <input type="checkbox" id="checkTrue" v-model="isTrue">
+        <label for="checkTrue">{{isTrue}}</label>
+        <hr>
+        <h4>复选框绑定一个数组</h4>
+        <p>
+            <input type="checkbox" id="suhan" value="suhan" v-model="my_old_name">
+            <label for="suhan">suhan</label>
+            <input type="checkbox" id="xiaohan" value="xiaohan" v-model="my_old_name">
+            <label for="xiaohan">xiaohan</label>
+            <input type="checkbox" id="cold-code" value="cold-code" v-model="my_old_name">
+            <label for="cold-code">cold-code</label>
+        </p>
+        <p>{{my_old_name}}</p>
+        <hr>
+        <h4>单选框</h4>
+        <input type="radio" id="one" value="男" v-model="sex">
+        <label for="one">男</label>
+        <input type="radio" id="two"  value="女"v-model="sex">
+        <label for="two">女</label>
+        <p>你选中的是: {{sex}}</p>
+    </div>
+    
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'Hello World!',
+                isTrue:true,
+                my_old_name:[],
+                sex:''
+            }
+        })
+        
+    </script>
+</body>
+</html>
