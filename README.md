@@ -12,3 +12,5 @@ Vue test demo
 [v-on demo](#)
 
 [v-model demo](#)
+
+[v-bind demo](#)
