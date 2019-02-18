@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.directive 自定义指令</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>Vue.directive 自定义指令</h1>
+    <hr>
+    <div id="app" >
+        <!-- directive的value值可以为methods里面的方法 -->
+        <!-- <div v-coldcode="changeColor">{{num}}</div> -->
+        <div v-coldcode="color">{{num}}</div>
+        <p><button @click="add">累加</button></p>
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.directive("coldcode",function(el,binding){
+            console.log(el)
+            console.log(binding.value)
+            console.log(binding.expression)
+            console.log(binding)
+            // 可以执行方法
+            // el.style.color=binding.value();
+            el.style.color=binding.value;
+        })
+
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num:10,
+                color:"green"
+            },
+            methods:{
+                add:function(){
+                    this.num++
+                },
+                changeColor:function(){
+                    console.log(this.color)
+                    return this.color
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>
