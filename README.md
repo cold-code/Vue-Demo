@@ -22,3 +22,5 @@
 [Vue.directive demo](#)
 
 [Vue.extend demo](#)
+
+[Vue.set demo](#)
