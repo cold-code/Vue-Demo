@@ -18,4 +18,7 @@
 [v-pre & v-cloak & v-once demo](#)
 
 ## Part 2 Vue public API demo
-[v-directive demo](#)
+
+[Vue.directive demo](#)
+
+[Vue.extend demo](#)
