@@ -1,5 +1,5 @@
 # Vue-Demo
-Vue test demo
+## Part 1 Vue test demo
 
 [Hello World demo](#)
 
@@ -16,3 +16,6 @@ Vue test demo
 [v-bind demo](#)
 
 [v-pre & v-cloak & v-once demo](#)
+
+## Part 2 Vue public API demo
+[v-directive demo](#)
