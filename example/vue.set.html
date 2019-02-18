@@ -23,7 +23,9 @@
             // Vue.set(outData,'count',2);
             // app.count++
             // outData.count++
-            //不优先访问outData将不能直接改变里面的值
+            // 由于Javascript的限制，Vue不能自动检测以下变动的数组。
+                // 1.当你利用索引直接设置一个项时，vue不会为我们自动更新。
+                // 2.当你修改数组的长度时，vue不会为我们自动更新。
             // app.arr[1] = 'dd';
             Vue.set(app.arr,1,'dd');
         }
