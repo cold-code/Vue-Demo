@@ -31,3 +31,6 @@
 
 [Vue template demo](#)  
 踩坑纪实：IE暂不支持Template模板
+
+[Vue component-1 组件（1）demo](#)  
+笔记：定义局部组件时，组件名一定要是字符串类型
