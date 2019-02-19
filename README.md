@@ -41,3 +41,5 @@
 
 [Vue component-3 组件（3）demo](#)  
 笔记：子组件一定要在父组件引用之前声明；
+
+[Vue component-3 组件（3）demo](#)  
