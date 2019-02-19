@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component-4 组件(4)</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>component-4 组件(4)</h1>
+    <hr>
+    <div id="app" >
+        <p><component :is="who"></component></p> 
+        <p><button @click="changeComponent()">changeComponent</button></p> 
+    </div>
+    
+    <script type="text/javascript">
+        var componentA = {
+            template:`
+                <div style="color:red">I'm componentA</div> 
+            `
+        }
+        var componentB = {
+            template:`
+                <div style="color:green">I'm componentB</div> 
+            `
+        }
+        var componentC = {
+            template:`
+                <div style="color:blue">I'm componentC</div> 
+            `
+        }
+        var app = new Vue({
+            el:'#app',
+            data:{
+                who:'componentC'
+            },
+            components:{
+               "componentA" :componentA,
+               "componentB" :componentB,
+               "componentC" :componentC,
+            },
+            methods:{
+                changeComponent:function(){
+                    if(this.who == 'componentA'){
+                        this.who = 'componentB'
+                    }else if(this.who == 'componentB'){
+                        this.who = 'componentC'
+                    }else{
+                        this.who = 'componentA'
+                    }
+                    // this.who = 'component'+setWord();
+                    // console.log('component'+setWord())
+                }
+            }
+        })
+        function setWord(){
+            var n = parseInt(Math.random()*3+1);
+            console.log('n',n);
+            var word;
+            word = n == 1 ? 'A' : n == 2 ? 'B' : 'C';
+            console.log('word',word);
+            console.log('who',app.who.split('component')[1]);
+            if(app.who.split('component')[1] == word){
+                setWord()
+            }else{
+                return word;
+            }
+        }
+       
+        
+    </script>
+</body>
+</html>
