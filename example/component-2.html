@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>component-1 组件(1)</title>
+    <title>component-2 组件(2)</title>
     <script type="text/javascript" src="../assets/js/vue.js"></script>
 </head>
 <body>
-    <h1>component-1 组件(1)</h1>
+    <h1>component-2 组件(2)</h1>
     <hr>
     <div id="app" >
-        <coldcode></coldcode>
-        <xiaohan></xiaohan>
+        <xiaohan here="湖南长沙" :age="age"></xiaohan>
     </div>
     
     <script type="text/javascript">
-        Vue.component('coldcode',{
-            template:`<div style="color:red">我是全局的coldcode组件</div>`
-        })
+        
         var app = new Vue({
             el:'#app',
+            data:{
+                age:'18',
+            },
             components:{
                 //此处一定得用字符串命名
                 "xiaohan":{
-                    template:'<div style="color:green">我是局部的xiaohan组件</div>'
+                    template:'<div style="color:green">xiaohan from {{here}},年岁 {{age}}</div>',
+                    //props一定是数组类型,遇到'-'改用小驼峰代替
+                    props:['here','age']
                 }
             }
         })
