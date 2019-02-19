@@ -29,5 +29,5 @@
 
 [lifecycle（生命周期） demo](#)
 
-[Vue template demo](#)
+[Vue template demo](#)  
 踩坑纪实：IE暂不支持Template模板
