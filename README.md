@@ -35,6 +35,6 @@
 [Vue component-1 组件（1）demo](#)  
 笔记：定义局部组件时，组件名一定要是字符串类型
 
-[Vue component-1 组件（1）demo](#)  
+[Vue component-2 组件（2）demo](#)  
 笔记：定义局部组件时，自定义属性注册props为数组类型；  
 踩坑纪实：给自定义属性绑定值时应该用的构造器内data选项里面的值;
