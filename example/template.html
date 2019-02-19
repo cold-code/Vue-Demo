@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template三种写法</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>Template三种写法</h1>
+    <hr>
+    <div id="app" >
+        {{message}}
+    </div>
+    <template id="temp2">
+        <h2 style="color:red">我是Template标签模板</h2>
+    </template>   
+    <script type="x-template" id="temp3">
+            <h2 style="color:red">我是Script标签模板</h2>
+    </script>     
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'Hello World!'
+            },
+            // 方法一(少量结构)
+            // template:`
+            //     <P><h2 style="color:red">我是选项模板</h2></P>
+            // `
+            // 方法二(大量结构)
+            // template:"#temp2",
+            // 方法三(可以引入外部模板文件)
+            template:"#temp3",
+        })
+        
+    </script>
+</body>
+</html>
