@@ -52,7 +52,7 @@
 笔记：数组倒序重排 arr.reverse()  
 踩坑纪实：在computed下方法内用到构造器data内的参数得加this引用
 
-[Vue methods Option demo](#) 
+[Vue methods Option demo](#)   
 笔记：四种常见用法：  
 1.传参用法；  
 2.$event鼠标属性参数;  
