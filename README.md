@@ -51,3 +51,5 @@
 [Vue computed Option demo](#)  
 笔记：数组倒序重排 arr.reverse()  
 踩坑纪实：在computed下方法内用到构造器data内的参数得加this引用
+
+[Vue methods Option demo](#) 
