@@ -53,3 +53,9 @@
 踩坑纪实：在computed下方法内用到构造器data内的参数得加this引用
 
 [Vue methods Option demo](#) 
+笔记：四种常见用法：  
+1.传参用法；  
+2.$event鼠标属性参数;  
+3.自定义组件借用.native修饰器来调用构造器里methods选项内的方法；  
+4.外部组件用原生onclick事件调取app.add()方法；（不建议,应该合理组织代码避免这类用法）
+
