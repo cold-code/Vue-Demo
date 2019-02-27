@@ -59,3 +59,5 @@
 3.自定义组件借用.native修饰器来调用构造器里methods选项内的方法；  
 4.外部组件用原生onclick事件调取app.add()方法；（不建议,应该合理组织代码避免这类用法）
 
+[Vue watch Option demo](#)  
+笔记：可以在构造器外部用app.$watch的方法实施监控
