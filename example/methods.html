@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Methods Option 方法选项</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>Methods Option 方法选项</h1>
+    <hr>
+    <div id="app" >
+        {{num}}
+        <!-- 还可传入$event参数,用以监听鼠标系列属性 -->
+        <p><button @click="add(2)">增加</button></p>
+        <p><btn  @click.native="add(2)"></btn></p>
+    </div>
+    <p><button onclick="app.add(3)">外部add</button></p>
+    
+    <script type="text/javascript">
+        var btn = {
+            template:`<button>组件add</button>`
+        }
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num:1
+            },
+            components:{
+                "btn":btn
+            },
+            methods:{
+                add:function(diff){
+                    if(diff != ''){
+                        this.num += diff
+                    }else{
+                        this.num++
+                    }
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>
