@@ -43,3 +43,8 @@
 笔记：子组件一定要在父组件引用之前声明；
 
 [Vue component-4 组件（4）demo](#)  
+
+## Part 3 Vue options demo
+
+[Vue propsData Option demo](#) 
+
