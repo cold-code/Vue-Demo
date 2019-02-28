@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Extends Option 混入选项操作</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>Extends Option 混入选项操作</h1>
+    <hr>
+    <div id="app" >
+        <p>${num}</p>
+        <p><button @click="add">增加</button></p>
+    </div>
+    
+    <script type="text/javascript">
+        var extendsObj = {
+            updated:function(){
+                console.log('我是扩展的updated')
+            },
+            methods:{
+                add:function(){
+                    console.log('我是原生的方法')
+                    this.num++
+                },
+            },
+        }
+
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num:1
+            },
+            methods:{
+                add:function(){
+                    console.log('我是原生的方法')
+                    this.num++
+                },
+            },
+            updated:function(){
+                console.log('我是原生的updated')
+            },
+            //区别于mixins，该扩展选项只能赋值一个扩展对象，而mixins可以是多个对象组成的数组
+            extends:extendsObj,
+            //修改插值容器符
+            delimiters:['${','}']
+
+        })
+        
+    </script>
+</body>
+</html>
