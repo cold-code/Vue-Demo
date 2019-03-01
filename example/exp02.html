@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example2 Methods Demo</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>Example2 Methods Demo</h1>
+    <hr>
+    <div id="app" ></div>
+    <p><button onclick="destroy()">卸载</button></p>
+    <p><button onclick="reload()">刷新</button></p>
+    <p><button onclick="tick()">更改数据</button></p>
+    <script type="text/javascript">
+        var coldCode = Vue.extend({
+            template:`<p>{{message}}</p>`,
+            data:function(){
+                return {
+                    message:'Hello I am Cold-code'
+                }
+            },
+            mounted:function(){
+                console.log('mounted被创建了');
+            },
+            destroyed:function(){
+                console.log('destroy被销毁后');
+            },
+            updated:function(){
+                console.log('update被更新');
+            }
+        })
+        var mount = new coldCode().$mount('#app')
+        function destroy(){
+            mount.$destroy()
+        }
+        function reload(){
+            mount.$forceUpdate()
+        }
+        function tick(){
+            mount.message = 'update message info';
+            mount.$nextTick(function(){
+                console.log('message更新完后我被调用了');
+            })
+        }
+    </script>
+</body>
+</html>
