@@ -72,5 +72,8 @@
 
 ## Part 4 Example Methods demo
 
-[Vue Example Methods Demo](#)  
+[Vue Example1 Methods Demo](#)  
 笔记：若引入了jQuery库就只能在mounted挂载了Dom结构后才能用jQuery来操作Dom
+
+[Vue Example2 Methods Demo](#)  
+笔记：nextTick方法的执行是在回调函数中进行，区别于destroy，reload
