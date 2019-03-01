@@ -62,6 +62,10 @@
 [Vue watch Option demo](#)  
 笔记：可以在构造器外部用app.$watch的方法实施监控
 
-[Vue watch Option demo](#)  
+[Vue Mixins Option demo](#)  
 笔记：调用顺序全局 => 构造器 => 原生钩子  
 踩坑纪实：全局调用mixin不加s
+
+[Vue Extends Option && Delimiters Option demo](#)  
+笔记: 扩展内的同名methods方法无效  
+踩坑纪实：扩展选项只能赋值一个扩展对象，而mixins可以是多个对象组成的数组
