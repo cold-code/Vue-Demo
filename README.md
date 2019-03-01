@@ -69,3 +69,8 @@
 [Vue Extends Option && Delimiters Option demo](#)  
 笔记: 扩展内的同名methods方法无效  
 踩坑纪实：扩展选项只能赋值一个扩展对象，而mixins可以是多个对象组成的数组
+
+## Part 4 Example Methods demo
+
+[Vue Example Methods Demo](#)  
+笔记：若引入了jQuery库就只能在mounted挂载了Dom结构后才能用jQuery来操作Dom
