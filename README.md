@@ -77,3 +77,6 @@
 
 [Vue Example2 Methods Demo](#)  
 笔记：nextTick方法的执行是在回调函数中进行，区别于destroy，reload
+
+[Vue Example3 Methods Demo](#)  
+笔记：在构造器外部添加进构造器内部的方法xx，需要在构造器外部用$emit(xx)调用一下  
