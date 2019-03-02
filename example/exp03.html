@@ -1,0 +1,61 @@
+<!-- 实例事件就是在构造器外部写一个调用构造器内部的方法。这样写的好处是可以通过这种写法在构造器外部调用构造器内部的数据 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example3 Methods Demo</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>Example3 Methods Demo</h1>
+    <hr>
+    <div id="app" >
+        {{num}}
+        <p><button @click="add">增加</button></p>
+    </div>
+    <p><button onclick="reduce()">减少</button></p>
+    <p><button onclick="reduceOnce()">减少一次</button></p>
+    <p><button onclick="off()">关闭减少方法</button></p>
+    
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num:1
+            },
+            methods:{
+                add:function(){
+                    this.num++
+                }
+            }
+        })
+
+        app.$on('reduce',function(){
+            console.log('执行了reduce方法');
+            this.num--;
+        })
+
+        app.$once('reduceOnce',function(){
+            console.log('只执行一次方法');
+            this.num--;
+        })
+
+        // 在构造器外部添加进构造器内部的方法xx，需要在构造器外部用$emit(xx)调用一下
+        function off(){
+            console.log('关闭了reduce方法');
+            app.$off('reduce');
+        }
+
+        function reduce(){
+            app.$emit('reduce');
+        }
+
+        function reduceOnce(){
+            app.$emit('reduceOnce');
+        }
+        
+    </script>
+</body>
+</html>
