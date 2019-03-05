@@ -80,3 +80,8 @@
 
 [Vue Example3 Methods Demo](#)  
 笔记：在构造器外部添加进构造器内部的方法xx，需要在构造器外部用$emit(xx)调用一下  
+
+[Vue Example3 Methods Demo](#)  
+踩坑纪实：  
+1.components一定要放在和构造器内data选项同级的位置；  
+2.如果要在组件内调用构造器内的方法应该放在自定义组件内调用而不是template内调用，调用时加'()'执行；
